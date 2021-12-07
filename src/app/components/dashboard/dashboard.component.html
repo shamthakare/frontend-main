@@ -1,0 +1,32 @@
+<div class="grid-container col-md-4">
+  <h1 class="mat-h1">Dashboard {{Userss.user_name}}</h1>
+  <mat-grid-list cols="1" rowHeight="350px">
+    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            <!-- {{card.title}} -->
+            <!-- {{Userss.user_name}} -->
+            {{              auth.getUserDetails()?.user_name }}
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+              <button mat-menu-item>Expand</button>
+              <button mat-menu-item>Remove</button>
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <div>
+            <!-- <h2>{{Userss.email_address}}</h2> -->
+            <h3>Email:  {{              auth.getUserDetails()?.email_address }}</h3>
+            <h3>address:  {{              auth.getUserDetails()?.address }}</h3>
+            <h3>Mobile:  {{              auth.getUserDetails()?.mobile_number }}</h3>
+            <h3>Company:  {{              auth.getUserDetails()?.companies }}</h3>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

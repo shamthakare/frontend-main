@@ -1,0 +1,12 @@
+.full-width-table {
+  width: 85%;
+  /* width: 50%; */
+  margin: 20px auto;
+padding: 20px 30px;
+}
+.full-w-table {
+  width: 100%;
+  /* width: 50%; */
+  margin: 30px auto;
+padding: 20px 30px;
+}
