@@ -20,7 +20,7 @@
           *ngIf="isHandset$ | async">
           <mat-icon aria-label="Side nav toggle icon"> </mat-icon>
         </button>
-        <a class="mtt" routerLink=''>GOESL</a>
+        <a class="mtt" routerLink=''>iConnect</a>
         <a class="mtt" *ngIf="!auth.isLoggedIn()" routerLink='login' routerLinkActive='active'>Login</a>
         <a class="mtt" *ngIf="!auth.isLoggedIn()" routerLink='register' routerLinkActive='active'>Register</a>
 
@@ -39,7 +39,7 @@
   <mat-sidenav-container class="sidenav-container">
     <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
-      <mat-toolbar>GOESL </mat-toolbar>
+      <mat-toolbar>iConnect </mat-toolbar>
       <mat-nav-list>
         <a mat-list-item routerLink='' routerLinkActive='active'>Home</a>
         <!-- <a mat-list-item *ngIf="!auth.isLoggedIn()" routerLink='login' routerLinkActive='active'>Login</a> -->
@@ -57,7 +57,7 @@
           *ngIf="isHandset$ | async">
           <mat-icon aria-label="Side nav toggle icon"> </mat-icon>
         </button>
-        <span routerLink=''>GOESL</span>
+        <span routerLink=''></span>
       </mat-toolbar> -->
       <!-- Add Content Here -->
       <router-outlet>
